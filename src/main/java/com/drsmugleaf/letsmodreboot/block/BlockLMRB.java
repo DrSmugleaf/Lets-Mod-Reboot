@@ -1,5 +1,6 @@
 package com.drsmugleaf.letsmodreboot.block;
 
+import com.drsmugleaf.letsmodreboot.creativetab.CreativeTabLMRB;
 import com.drsmugleaf.letsmodreboot.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -12,6 +13,7 @@ public class BlockLMRB extends Block
     public BlockLMRB(Material material)
     {
         super(material);
+        this.setCreativeTab(CreativeTabLMRB.LMRB_TAB);
     }
 
     public BlockLMRB()
