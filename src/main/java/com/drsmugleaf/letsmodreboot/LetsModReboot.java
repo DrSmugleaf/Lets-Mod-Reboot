@@ -1,6 +1,7 @@
 package com.drsmugleaf.letsmodreboot;
 
 import com.drsmugleaf.letsmodreboot.handler.ConfigurationHandler;
+import com.drsmugleaf.letsmodreboot.init.ModBlocks;
 import com.drsmugleaf.letsmodreboot.init.ModItems;
 import com.drsmugleaf.letsmodreboot.proxy.IProxy;
 import com.drsmugleaf.letsmodreboot.reference.Reference;
@@ -29,6 +30,8 @@ public class LetsModReboot
         LogHelper.info("Pre Initialization Complete!");
 
         ModItems.init();
+
+        ModBlocks.init();
     }
 
     @Mod.EventHandler
