@@ -1,6 +1,7 @@
 package com.drsmugleaf.letsmodreboot;
 
 import com.drsmugleaf.letsmodreboot.handler.ConfigurationHandler;
+import com.drsmugleaf.letsmodreboot.init.ModItems;
 import com.drsmugleaf.letsmodreboot.proxy.IProxy;
 import com.drsmugleaf.letsmodreboot.reference.Reference;
 import com.drsmugleaf.letsmodreboot.utility.LogHelper;
@@ -26,6 +27,8 @@ public class LetsModReboot
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Initialization Complete!");
+
+        ModItems.init();
     }
 
     @Mod.EventHandler
