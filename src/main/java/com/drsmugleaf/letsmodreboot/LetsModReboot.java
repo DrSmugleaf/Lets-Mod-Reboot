@@ -3,6 +3,7 @@ package com.drsmugleaf.letsmodreboot;
 import com.drsmugleaf.letsmodreboot.handler.ConfigurationHandler;
 import com.drsmugleaf.letsmodreboot.init.ModBlocks;
 import com.drsmugleaf.letsmodreboot.init.ModItems;
+import com.drsmugleaf.letsmodreboot.init.Recipes;
 import com.drsmugleaf.letsmodreboot.proxy.IProxy;
 import com.drsmugleaf.letsmodreboot.reference.Reference;
 import com.drsmugleaf.letsmodreboot.utility.LogHelper;
@@ -38,6 +39,7 @@ public class LetsModReboot
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        Recipes.init();
         LogHelper.info("Initialization Complete!");
     }
 
@@ -46,10 +48,10 @@ public class LetsModReboot
     {
         LogHelper.info("Post Initialization Complete!");
 
-        for (String oreName : OreDictionary.getOreNames())
+        /**for (String oreName : OreDictionary.getOreNames())
         {
             LogHelper.info(oreName);
             OreDictionary.getOres("stickWood");
-        }
+        }**/
     }
 }
